@@ -1,22 +1,650 @@
 .App {
+  font-family: "Quicksand", sans-serif;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+}
+
+:root {
+  --primary-color: #3700ff;
+  --dark-color: #141414;
+  --light-color: #f4f4f4;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+/* --------------------------
+HOME PAGE STYLING
+--------------------------- */
+
+.carousel {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  height: 700px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(236, 236, 236);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.35rem rgba(0, 0, 0, 0.226) !important;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.information {
+  height: 100;
+  width: 100%;
+  padding-bottom: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.other-meetings {
+  padding: 2px;
+}
+
+.map {
+  width: 535px;
+  height: 525px;
+}
+
+.location {
+  padding-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contact {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: url("/img/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* --------------------------
+ABOUT PAGE STYLING
+--------------------------- */
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.description {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.description .content-wrap {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+}
+
+.description .content-body {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.top img {
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom img {
+  position: absolute;
+  width: 27%;
+  height: 60%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.description h1 {
+  font-size: 2em;
+}
+
+.bottom {
+  background: #222;
+  z-index: 1;
+}
+
+.bottom .content-body {
+  right: 5%;
+}
+
+.bottom h1 {
+  color: #fdab00;
+}
+
+.top {
+  background: var(--light-color);
+  color: #222;
+  z-index: 2;
+  width: 50vw;
+}
+
+.top .content-body {
+  left: 5%;
+  color: #222;
+}
+
+.handle {
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #fdab00;
+  width: 10px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+
+.skewed .handle {
+  top: 50%;
+  transform: rotate(30deg) translateY(-50%);
+  height: 200%;
+  transform-origin: top;
+}
+
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+
+/* Tabs */
+
+.eldership {
+  background: var(--light-color);
+  padding-top: 1rem;
+  border-right: none;
+}
+
+.eldership .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.eldership p {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+}
+
+.eldership .container > div {
+  padding: 0;
+}
+
+.eldership .container > div:hover {
+  color: rgba(141, 141, 141, 0.603);
+  cursor: pointer;
+}
+
+.tab-item {
+  border-bottom: var(--dark-color) 4px solid;
+  color: rgb(87, 0, 0);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.presbytry {
+  position: relative;
+  height: 75vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(236, 236, 236);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.35rem rgba(0, 0, 0, 0.226) !important;
+}
+
+.presbyter {
+  position: relative;
+  height: 90vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(236, 236, 236);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.35rem rgba(0, 0, 0, 0.226) !important;
+}
+
+/* Tab Content */
+
+.tab-content {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: rgb(0, 0, 0);
+}
+
+.show {
+  display: block !important;
+  opacity: 1 !important;
+  transition: all 1000 ease-in;
+}
+
+/* Container */
+.container {
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.eldership {
+  padding: 50px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #888;
+  text-decoration: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0;
+}
+
+/* pastors pages */
+
+.pastor-description {
+  height: 62.5%;
+}
+/* --------------------------
+MINISTRIES STYLING
+--------------------------- */
+.departments {
+  padding: 50px;
+}
+
+.department {
+  position: relative;
+  height: 50vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(236, 236, 236);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.35rem rgba(0, 0, 0, 0.226) !important;
+}
+
+.bottom-part {
+  padding: 50px;
+}
+
+.tabs .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.word {
+  padding: 70px;
+}
+
+.preaching {
+  position: relative;
+  height: 60vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(236, 236, 236);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.35rem rgba(0, 0, 0, 0.226) !important;
+}
+
+.randomized-gallery {
+  padding: 70px;
+}
+
+.ministry {
+  padding: 50px;
+}
+
+.ministry-description {
+  height: 69.2%;
+}
+
+/* --------------------------
+FOOTER STYLING
+--------------------------- */
+
+.descriptions {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 20px;
+  opacity: 0;
+}
+
+.descriptions h1 {
+  color: rgba(214, 0, 0, 0.89);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.descriptions p {
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.message p {
+  color: #000;
+  text-transform: capitalize;
+}
+
+.image-size {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  background: rgb(236, 236, 236);
+  color: rgb(43, 43, 43);
+  padding-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heart {
+  color: rgb(255, 145, 145);
+}
+
+ul {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer-content .made-with {
+  margin: auto;
+  text-align: center;
+  padding-left: 650px;
+  float: right;
+}
+
+/* ---icons ---*/
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: 20px;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+.social-icons {
+  padding-left: 190px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons ul a {
+  margin: 0px 45px;
+  display: inline-block;
+  text-decoration: none;
+  display: block;
+  color: rgb(43, 43, 43);
+}
+
+.social-icons ul a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.social-icons h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+}
+
+.links {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: 190px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links ul a {
+  margin: 0px 10px 15px 10px;
+  display: inline-block;
+  text-decoration: none;
+  display: block;
+  color: rgb(43, 43, 43);
+  background: none;
+  border: none;
+}
+
+.links ul a:hover {
+  color: rgb(255, 255, 255);
+  background: none;
+}
+
+.company-logo {
+  padding-bottom: 30px;
+  padding-left: 70px;
+}
+
+.company-details {
+  padding-left: 150px;
+}
+
+.copy-rights {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.company-name {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+.company-address {
+  text-transform: uppercase;
+}
+
+.made-with {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/*------------------------
+MEDIA QUERIES
+------------------------*/
+
+@media (max-width: 768px) {
+  body {
+    font-size: 75%;
+  }
 }
